@@ -17,7 +17,7 @@ void plotWave(void *)
     {
       delayPlotWave.repeat();
       dacWrite(def_pin_DAC1, 127 + uint8_t(127 * sin(2.0 * PI * CILCE_FREQ * timeWave)));
-      if (++timeWave >= CILCE_PERIODO)0 timeWave = 0;
+      if (++timeWave >= CILCE_PERIODO) timeWave = 0;
     }
   }
 }
