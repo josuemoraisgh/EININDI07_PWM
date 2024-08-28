@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include "IiKit.h"
 
+// 80M / RESOLUÇÃO = FREQUENCIA MÁXIMA
+
 #define TIME_DELAY 10.0 // Time em microsegundos
 // #define configTICK_RATE_HZ uint32_t(1.0/(TIME_DELAY/1000000.0))
 // #define portTICK_PERIOD_US (1.0/TIME_DELAY)
