@@ -1,0 +1,16 @@
+https://mundoprojetado.com.br/gerando-sinal-alternado-com-arduino/
+
+O programa abaixo em python gera uma lista, que varia o ângulo linearmente em 256 partes iguais indo de 0 a π/2. 
+
+import math
+import numpy as np
+
+step = math.pi/(2*255)
+pwm = []
+
+for i in np.arange(0, math.pi/2+step, step):
+    pwm.append(round(math.sin(i)*255))
+
+print(pwm)
+
+

@@ -6,6 +6,8 @@ class DInput_c
 {
 protected:
     uint8_t pin;
+    static bool isFirstObj; 
+    static xQueueHandle interputQueue;       
     volatile unsigned long reading_time = 0;
     volatile uint8_t status_DIn = LOW;
     volatile uint8_t last_status_DIn = LOW;
@@ -16,30 +18,42 @@ protected:
 
 public:
     DInput_c() { DInput_c(0); }
-    DInput_c(uint8_t pinDIn) { setPin(pinDIn); }
+    DInput_c(uint8_t pinDIn);
     void onValueChanged(std::function<void(uint8_t status)> f /*void (*f)(uint8_t status)*/);
     void onPressedWithTime(std::function<void()> f /*void (*f)(void)*/);
     void setPin(uint8_t pinDIn);
     uint8_t getPin(void);
     uint8_t getStatus();
     void setTimeOnPressed(uint8_t time);
-    friend inline void updateDInput();   
+    friend inline void updateDInput(void *); 
+    static void IRAM_ATTR gpio_interrupt_handler(void *args);
 };
 
-xQueueHandle interputQueue = xQueueCreate(10, sizeof(DInput_c *));
+bool DInput_c::isFirstObj = false;
+xQueueHandle DInput_c::interputQueue = xQueueCreate(10, sizeof(DInput_c *));
 
-inline void updateDInput()
+inline void updateDInput(void *)
 {
     DInput_c *dIn;
-    if (xQueueReceive(interputQueue, dIn, 0))
+    if (xQueueReceive(DInput_c::interputQueue, dIn, 0))
     {
         dIn->debounce();
     }
 }
 
-static void IRAM_ATTR gpio_interrupt_handler(void *args)
+DInput_c::DInput_c(uint8_t pinDIn)
 {
-    xQueueSendFromISR(interputQueue, (DInput_c *)args, NULL);
+    if (isFirstObj == false)
+    {
+        xTaskCreate(updateDInput, "Task Wave", 5000, NULL, 1, NULL);
+        isFirstObj = true;
+    }
+    setPin(pinDIn);
+}
+
+void IRAM_ATTR gpio_interrupt_handler(void *args)
+{
+    xQueueSendFromISR(DInput_c::interputQueue, (DInput_c *)args, NULL);
 }
 
 bool DInput_c::debounce()

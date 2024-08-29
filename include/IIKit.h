@@ -176,7 +176,7 @@ void IIKit_c::loop(void)
     updateWSerial(&WSerial);
     updateDisplay(&disp);
     if (wm.getPortalRunning()) wm.process();
-    updateDInput();          
+    updateDInput(NULL);          
 }
 
 void IIKit_c::errorMsg(String error, bool restart)

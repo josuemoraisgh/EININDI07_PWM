@@ -1,0 +1,69 @@
+<circuit version="" rev="1751" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Capacitor" CircId="Capacitor-31" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-276" rotation="180" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="12,20" valLabRot="-180" Capacitance="1.5 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+
+<item itemtype="Resistor" CircId="Resistor-29" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-404,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-19" valLabRot="0" Resistance="1 kΩ" />
+
+<item itemtype="Subcircuit" CircId="Uno-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-188,-312" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="91,-18" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="19_mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
+</item>
+
+<item itemtype="Resistor" CircId="Resistor-18" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-356,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="1 kΩ" />
+
+<item itemtype="Capacitor" CircId="Capacitor-17" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-212" rotation="90" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="-4,-11" valLabRot="-90" Capacitance="1.5 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+
+<item itemtype="opAmp" CircId="opAmp-16" mainComp="false" Show_id="false" Show_Val="false" Pos="-476,-228" rotation="0" hflip="-1" vflip="1" label="opAmp-43" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="10000" Out_Imped="1e-14 Ω" Power_Pins="false" Switch_Pins="false" Volt_Pos="5 V" Volt_Neg="-5 V" />
+
+<item itemtype="Ground" CircId="Ground-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-428,-172" rotation="0" hflip="1" vflip="1" label="Ground-33" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="SerialPort" CircId="SerialPort-40" mainComp="false" Show_id="false" Show_Val="false" Pos="-148,-348" rotation="0" hflip="1" vflip="1" label="SerialPort-101" idLabPos="-34,-20" labelrot="0" valLabPos="0,0" valLabRot="0" Port="COM7" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" SerialMon="false" />
+
+<item itemtype="Oscope" CircId="Oscope-300" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,-396" rotation="0" hflip="1" vflip="1" label="Oscope-300" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="40959800000" TimPos="0,1587949327,1587949327,1587949327," VolDiv="0.492951,0.764795,0.764795,0.764795," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="0" Tracks="1" HideCh="false,false,false,false," VolPos="-2.48354,-2.86184,-2.86184,-2.86184," />
+
+<item itemtype="Oscope" CircId="Oscope-368" mainComp="false" Show_id="false" Show_Val="false" Pos="-176,-8" rotation="0" hflip="1" vflip="1" label="Oscope-368" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="1317900287" TimPos="0,1639535577,1639535577,1639535577," VolDiv="0.874529,0.874529,0.874529,0.874529," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="-2.80081,-2.80081,-2.80081,-2.80081," />
+
+<item itemtype="Node" CircId="Node-32" mainComp="false" Pos="-380,-236" />
+
+<item itemtype="Node" CircId="Node-30" mainComp="false" Pos="-428,-236" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="-500,-228" />
+
+<item itemtype="Node" CircId="Node-302" mainComp="false" Pos="-508,-228" />
+
+<item itemtype="Node" CircId="Node-377" mainComp="false" Pos="-320,-236" />
+
+<item itemtype="Connector" uid="connector-371" startpinid="opAmp-16-inputNinv" endpinid="Node-30-0" pointList="-452,-236,-428,-236" />
+
+<item itemtype="Connector" uid="connector-372" startpinid="Resistor-29-lPin" endpinid="Node-30-1" pointList="-420,-236,-428,-236" />
+
+<item itemtype="Connector" uid="connector-373" startpinid="Node-30-2" endpinid="Capacitor-17-lPin" pointList="-428,-236,-428,-228" />
+
+<item itemtype="Connector" uid="connector-374" startpinid="Resistor-29-rPin" endpinid="Node-32-0" pointList="-388,-236,-380,-236" />
+
+<item itemtype="Connector" uid="connector-375" startpinid="Capacitor-31-lPin" endpinid="Node-32-1" pointList="-412,-276,-380,-276,-380,-236" />
+
+<item itemtype="Connector" uid="connector-376" startpinid="Node-32-2" endpinid="Resistor-18-lPin" pointList="-380,-236,-372,-236" />
+
+<item itemtype="Connector" uid="connector-377" startpinid="Ground-12-Gnd" endpinid="Capacitor-17-rPin" pointList="-428,-188,-428,-196" />
+
+<item itemtype="Connector" uid="connector-378" startpinid="opAmp-16-inputInv" endpinid="Node-11-1" pointList="-452,-220,-452,-196,-500,-196,-500,-228" />
+
+<item itemtype="Connector" uid="connector-379" startpinid="Node-11-2" endpinid="opAmp-16-output" pointList="-500,-228,-500,-228" />
+
+<item itemtype="Connector" uid="connector-388" startpinid="Capacitor-31-rPin" endpinid="Node-302-0" pointList="-444,-276,-508,-276,-508,-228" />
+
+<item itemtype="Connector" uid="connector-389" startpinid="Oscope-300-Pin0" endpinid="Node-302-1" pointList="-492,-444,-556,-444,-556,-228,-508,-228" />
+
+<item itemtype="Connector" uid="connector-390" startpinid="Node-302-2" endpinid="Node-11-0" pointList="-508,-228,-500,-228" />
+
+<item itemtype="Connector" uid="Connector-398" startpinid="Uno-19-1" endpinid="SerialPort-40-pin1" pointList="-180,-288,-172,-288,-172,-340,-188,-340" />
+
+<item itemtype="Connector" uid="Connector-399" startpinid="SerialPort-40-pin0" endpinid="Uno-19-0" pointList="-188,-356,-200,-356,-200,-296,-180,-296" />
+
+<item itemtype="Connector" uid="Connector-376" startpinid="Oscope-368-Pin0" endpinid="Node-377-0" pointList="-264,-56,-320,-56,-320,-236" />
+
+<item itemtype="Connector" uid="Connector-402" startpinid="Uno-19-6" endpinid="Node-377-1" pointList="-180,-248,-320,-248,-320,-236" />
+
+<item itemtype="Connector" uid="Connector-403" startpinid="Node-377-2" endpinid="Resistor-18-rPin" pointList="-320,-236,-340,-236" />
+
+</circuit>
