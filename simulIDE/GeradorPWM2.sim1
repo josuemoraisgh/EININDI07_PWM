@@ -5,7 +5,7 @@
 <item itemtype="Resistor" CircId="Resistor-29" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-404,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-19" valLabRot="0" Resistance="1 kΩ" />
 
 <item itemtype="Subcircuit" CircId="Uno-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-188,-312" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="91,-18" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="19_mega328-109" Frequency="16 MHz" Program="../PWMDUASsaidasAnalogicas1/build/arduino.avr.uno/PWMDUASsaidasAnalogicas1.ino.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
+<mainCompProps MainCompId="19_mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
 </item>
 
 <item itemtype="Resistor" CircId="Resistor-18" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-356,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="1 kΩ" />
@@ -30,7 +30,7 @@
 
 <item itemtype="SerialPort" CircId="SerialPort-40" mainComp="false" Show_id="false" Show_Val="false" Pos="-148,-348" rotation="0" hflip="1" vflip="1" label="SerialPort-101" idLabPos="-34,-20" labelrot="0" valLabPos="0,0" valLabRot="0" Port="COM7" Baudrate="19200 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" SerialMon="false" />
 
-<item itemtype="Oscope" CircId="Oscope-300" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,-396" rotation="0" hflip="1" vflip="1" label="Oscope-300" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="13891200000" TimPos="0,18331747124,18331747124,18331747124," VolDiv="0.67081,0.270058,0.270058,0.270058," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="0" Tracks="1" HideCh="false,false,false,false," VolPos="0.00122545,-0.00852933,-0.00852933,-0.00852933," />
+<item itemtype="Oscope" CircId="Oscope-300" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,-396" rotation="0" hflip="1" vflip="1" label="Oscope-300" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="22834819538" TimPos="2215452000,2215452000,2215452000,2215452000," VolDiv="0.769932,0.769932,0.769932,0.769932," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0.28459,0.28459,0.28459,0.28459," />
 
 <item itemtype="Oscope" CircId="Oscope-368" mainComp="false" Show_id="false" Show_Val="false" Pos="-176,-8" rotation="0" hflip="1" vflip="1" label="Oscope-368" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="3509725761" TimPos="746501016,746501016,746501016,746501016," VolDiv="1.34479,1.34479,1.34479,1.34479," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="-0.609842,-0.609842,-0.609842,-0.609842," />
 
