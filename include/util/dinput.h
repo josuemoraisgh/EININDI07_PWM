@@ -6,8 +6,7 @@ class DInput_c
 {
 protected:
     uint8_t pin;
-    static bool isFirstObj; 
-    static xQueueHandle interputQueue;       
+    static bool isFirstObj;        
     volatile unsigned long reading_time = 0;
     volatile uint8_t status_DIn = LOW;
     volatile uint8_t last_status_DIn = LOW;
@@ -26,16 +25,16 @@ public:
     uint8_t getStatus();
     void setTimeOnPressed(uint8_t time);
     friend inline void updateDInput(void *); 
-    static void IRAM_ATTR gpio_interrupt_handler(void *args);
+    friend void IRAM_ATTR gpio_interrupt_handler(void *args);
 };
 
 bool DInput_c::isFirstObj = false;
-xQueueHandle DInput_c::interputQueue = xQueueCreate(10, sizeof(DInput_c *));
+xQueueHandle interputQueue = xQueueCreate(10, sizeof(DInput_c *));
 
 inline void updateDInput(void *)
 {
     DInput_c *dIn;
-    if (xQueueReceive(DInput_c::interputQueue, dIn, 0))
+    if (xQueueReceive(interputQueue, dIn, 0))
     {
         dIn->debounce();
     }
@@ -53,7 +52,7 @@ DInput_c::DInput_c(uint8_t pinDIn)
 
 void IRAM_ATTR gpio_interrupt_handler(void *args)
 {
-    xQueueSendFromISR(DInput_c::interputQueue, (DInput_c *)args, NULL);
+    xQueueSendFromISR(interputQueue, (DInput_c *)args, NULL);
 }
 
 bool DInput_c::debounce()

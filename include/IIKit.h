@@ -12,7 +12,7 @@
 #include "services\wifimanager_c.h"
 
 #include "util/asyncDelay.h"
-#include "util/dinput.h"
+#include "util/din.h"
 
 /********** POTENTIOMETERS GPIO define *****/
 #define def_pin_POT1 36 // GPIO36
@@ -53,10 +53,10 @@ private:
     void errorMsg(String error, bool restart = true);    
 
 public:
-    DInput_c rtn_1;
-    DInput_c rtn_2;
-    DInput_c push_1;
-    DInput_c push_2;
+    DIn_c rtn_1;
+    DIn_c rtn_2;
+    DIn_c push_1;
+    DIn_c push_2;
     Display_c disp;
     WSerial_c WSerial;    
     // HartUdp_c ds8500Serial(4000);    
@@ -83,7 +83,7 @@ inline void IIKit_c::setup()
     // EEPROM.write(0,(uint8_t) idKit[0]);
     // EEPROM.commit();
     /********** Initializes with kit id ******/
-    idKit[0] = (char)EEPROM.read(0); // id do kit utilizado
+    idKit[0] = (char) EEPROM.read(0); // id do kit utilizado
     strcat(DDNSName, idKit);
     /************** Starting WIFI ************/
     WiFi.mode(WIFI_STA);
@@ -176,7 +176,10 @@ void IIKit_c::loop(void)
     updateWSerial(&WSerial);
     updateDisplay(&disp);
     if (wm.getPortalRunning()) wm.process();
-    updateDInput(NULL);          
+    updateDIn(&rtn_1);
+    updateDIn(&rtn_2);
+    updateDIn(&push_1);
+    updateDIn(&push_2);        
 }
 
 void IIKit_c::errorMsg(String error, bool restart)
