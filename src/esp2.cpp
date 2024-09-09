@@ -2,22 +2,22 @@
 #include "IiKit.h"
 
 #define FREQ 50.0
-#define TIME_DELAY 10.0 // Time em microsegundos
+#define TIME_DELAY 100.0 // Time em milisegundos
 
 #define CILCE_FREQ (FREQ * TIME_DELAY / 1000000.0)
 #define CILCE_PERIODO (1.0 / CILCE_FREQ)
 
 void plotWave(void *)
 {
-  uint16_t timeWave = 0;                            // Índice para percorrer a tabela de formas de onda
+  uint16_t timeWave = 0;                          // Índice para percorrer a tabela de formas de onda
   AsyncDelay_c delayPlotWave(TIME_DELAY, ISMICROS); // time in micro second
   for (;;)
   {
     if (delayPlotWave.isExpired())
     {
       delayPlotWave.repeat();
-      ledcWrite(0, 512 - uint8_t(511 * sin(2.0 * PI * CILCE_FREQ * timeWave)));
-      dacWrite(def_pin_DAC1, 128 + uint8_t(127 * sin(2.0 * PI * CILCE_FREQ * timeWave)));
+      ledcWrite(0, uint16_t(512.0 + 511.0 * sin(2.0 * PI * CILCE_FREQ * timeWave)));
+      dacWrite(def_pin_DAC1, uint8_t(128 + 127 * sin(2.0 * PI * CILCE_FREQ * timeWave)));
       if (++timeWave >= CILCE_PERIODO) timeWave = 0;
     }
   }
