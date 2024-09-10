@@ -9,6 +9,6 @@ for /f "tokens=1,2 delims==" %%a in (../platformio.ini) do (
 )
 goto fim
 :next
-    com2tcp-rfc2217.bat \\.\CNCA10 inindkit%kitId%.local 400%kitId%
-    rem com2tcp-rfc2217.bat \\.\CNCA1%kitId% inindkit%kitId%.local 400%kitId%
+    rem com2tcp-rfc2217.bat \\.\CNCA10 inindkit%kitId%.local 400%kitId%
+    com2tcp-rfc2217.bat \\.\CNCA1%kitId% inindkit%kitId%.local 400%kitId%
 :fim

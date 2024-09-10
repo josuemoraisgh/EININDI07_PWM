@@ -11,7 +11,7 @@ void plotWave(void *)
     if (delayPlotWave.isExpired())
     {
       delayPlotWave.repeat();    
-      ledcWrite(0,map(analogRead(def_pin_POT1), 0, 4095, 0, 1024));
+      ledcWrite(0,map(analogRead(def_pin_POT1), 0, 4095, 0, 1023));
     }
   }
 }
