@@ -34,10 +34,10 @@ void writeWave(void *)
 }
 
 
-#define TIME_DELAY2 1.0 // Time em milisegundos
+#define TIME_DELAY2 100.0 // Time em milisegundos
 void readWave(void *)
 {
-  AsyncDelay_c delayReadWave(TIME_DELAY2, ISMILI); // time in mili second  
+  AsyncDelay_c delayReadWave(TIME_DELAY2, ISMICROS); // time in mili second  
   for (;;)
   {
     if (delayReadWave.isExpired())
