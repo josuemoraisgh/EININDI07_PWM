@@ -5,8 +5,8 @@
 #include <ESPmDNS.h>
 #include <EEPROM.h>
 #include <WiFi.h>
-#include <OTA.h>
 
+#include "services\OTA.h"
 #include "services\WSerial_c.h"
 #include "services\display_c.h"
 #include "services\wifimanager_c.h"
@@ -83,7 +83,7 @@ inline void IIKit_c::setup()
     // EEPROM.write(0,(uint8_t) idKit[0]);
     // EEPROM.commit();
     /********** Initializes with kit id ******/
-    idKit[0] = (char) EEPROM.read(0); // id do kit utilizado
+    idKit[0] = (char)EEPROM.read(0); // id do kit utilizado
     strcat(DDNSName, idKit);
     /************** Starting WIFI ************/
     WiFi.mode(WIFI_STA);
@@ -108,9 +108,9 @@ inline void IIKit_c::setup()
         errorMsg("Wifi  error.\nAP MODE...", false);
 
     /************** Starting OTA *************/
-    OTA::setup(DDNSName);// OTA tem que ser depois do wifi e wifiManager
+    OTA::start(DDNSName);// OTA tem que ser depois do wifi e wifiManager
     /*** Starting Telnet Mode in WSerial ****/
-    startWSerial(&WSerial,4000+String(idKit).toInt());
+    startWSerial(&WSerial,4000);
     /********** POTENTIOMETERS GPIO define *****/
     pinMode(def_pin_POT1, ANALOG);
     pinMode(def_pin_POT2, ANALOG);
@@ -179,7 +179,7 @@ void IIKit_c::loop(void)
     updateDIn(&rtn_1);
     updateDIn(&rtn_2);
     updateDIn(&push_1);
-    updateDIn(&push_2);        
+    updateDIn(&push_2);            
 }
 
 void IIKit_c::errorMsg(String error, bool restart)
