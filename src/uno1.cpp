@@ -1,30 +1,31 @@
 #include <Arduino.h>
 #include <math.h>
 
-#define pinPWM 6                            //Configura o pino de Saida do PWM
-#define PERIODO1 100                        //Em us 100ms
-#define PERIODO2 16                         //Em us 16ms
+#define pinPWM 6         // Pino de saída do PWM
+#define PERIODO 100      // Número de pontos para um ciclo completo da senoide
+
+byte count = 0;
+uint8_t sineTable[PERIODO];
+
 #define TIME_DELAY_MS 1
+uint32_t previousTimeMS = 0;
 
-uint64_t previousTimeMS = 0;
-byte count1 = 0;
-byte count2 = 0;
-
-void setup() // Codigo de configuração
-{
+void setup() {
   Serial.begin(19200);
   pinMode(pinPWM, OUTPUT);
+
+  // Pré-calcula todos os pontos de um ciclo da senoide e os armazena no vetor
+  for (int i = 0; i < PERIODO; i++) {
+    float angle = 2.0 * PI * i / PERIODO;
+    sineTable[i] = (uint8_t)(127 * sin(angle) + 127); // Mapeia a senoide de [-1, 1] para [0, 255]
+  }
 }
 
-void loop()
-{
-  const uint64_t currentTimeMS = millis();
-  if ((currentTimeMS - previousTimeMS) >= TIME_DELAY_MS)
-  {
+void loop() {
+  uint32_t currentTimeMS = millis();
+  if ((currentTimeMS - previousTimeMS) >= TIME_DELAY_MS) {
     previousTimeMS = currentTimeMS;
-    //analogWrite(pinPWM,100*sin(2*PI*count1/PERIODO1)+27*sin(2*PI*count2/PERIODO2)+127);
-    analogWrite(pinPWM, 127 * sin(2 * PI * count1 / PERIODO1) + 127);
-    if (++count1 >= PERIODO1) count1 = 0;
-    if (++count2 >= PERIODO2) count2 = 0;    
+    analogWrite(pinPWM, sineTable[count]);
+    count = (count + 1) % PERIODO;    
   }
 }
