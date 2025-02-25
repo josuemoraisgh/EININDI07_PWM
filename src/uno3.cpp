@@ -21,7 +21,7 @@ void recalcSineTable() {
   // Para a metade de um ciclo: ângulo varia de 0 a π.
   // Se houver mais de um ponto, usamos (resolutionHalfWave - 1) para que o último valor se aproxime de π.
   for (uint16_t i = 0; i < resolutionHalfWave; i++) {
-    float angle = PI * i / resolutionHalfWave;
+    float angle = (resolutionHalfWave > 1) ? (PI * i / (resolutionHalfWave - 1)) : 0;    
     halfSineTable[i] = (uint8_t)(amplitude * sin(angle));
   }
   // Período completo = 1/frequency (em segundos)
