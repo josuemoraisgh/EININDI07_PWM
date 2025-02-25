@@ -5,7 +5,7 @@
 <item itemtype="Resistor" CircId="Resistor-29" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-404,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-19" valLabRot="0" Resistance="10 kΩ" />
 
 <item itemtype="Subcircuit" CircId="Uno-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-188,-312" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="91,-18" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" eeprom="0,0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" eeprom="0,0,0,0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
 </item>
 
 <item itemtype="Resistor" CircId="Resistor-18" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-356,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="10 kΩ" />
@@ -28,11 +28,11 @@
 
 <item itemtype="Resistor" CircId="Resistor-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-236,-296" rotation="0" hflip="1" vflip="1" label="Resistor-61" idLabPos="-12,-20" labelrot="0" valLabPos="-8,-17" valLabRot="0" Resistance="3 kΩ" />
 
-<item itemtype="SerialPort" CircId="SerialPort-40" mainComp="false" Show_id="false" Show_Val="false" Pos="-148,-348" rotation="0" hflip="1" vflip="1" label="SerialPort-101" idLabPos="-34,-20" labelrot="0" valLabPos="0,0" valLabRot="0" Auto="true" Port="COM3" Baudrate="19200 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+<item itemtype="SerialPort" CircId="SerialPort-40" mainComp="false" Show_id="false" Show_Val="false" Pos="-152,-352" rotation="0" hflip="1" vflip="1" label="SerialPort-101" idLabPos="-34,-20" labelrot="0" valLabPos="0,0" valLabRot="0" Auto="true" Port="COM3" Baudrate="19200 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
 
-<item itemtype="Oscope" CircId="Oscope-300" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,-396" rotation="0" hflip="1" vflip="1" label="Oscope-300" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="13442765487" TimPos="0,2215452000,2215452000,2215452000," VolDiv="1.06113,1.06113,1.06113,1.06113," Tunnels=",,,," Trigger="0" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0.0187164,-0.151226,-0.151226,-0.151226," />
+<item itemtype="Oscope" CircId="Oscope-300" mainComp="false" Show_id="false" Show_Val="false" Pos="-404,-396" rotation="0" hflip="1" vflip="1" label="Oscope-300" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="26442262183" TimPos="-184557357082,-182341905083,-182341905083,-182341905083," VolDiv="1.06113,1.06113,1.06113,1.06113," Tunnels=",,,," Trigger="4" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0.0187164,-0.151226,-0.151226,-0.151226," />
 
-<item itemtype="Oscope" CircId="Oscope-368" mainComp="false" Show_id="false" Show_Val="false" Pos="-176,-8" rotation="0" hflip="1" vflip="1" label="Oscope-368" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="3509725761" TimPos="746501016,746501016,746501016,746501016," VolDiv="1.34479,1.34479,1.34479,1.34479," Tunnels=",,,," Trigger="0" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="-0.609842,-0.609842,-0.609842,-0.609842," />
+<item itemtype="Oscope" CircId="Oscope-368" mainComp="false" Show_id="false" Show_Val="false" Pos="-176,-8" rotation="0" hflip="1" vflip="1" label="Oscope-368" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="30791695509" TimPos="-3098040150,-3098040150,-3098040150,-3098040150," VolDiv="1.73725,1.73725,1.73725,1.73725," Tunnels=",,,," Trigger="0" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="-0.139253,-0.139253,-0.139253,-0.139253," />
 
 <item itemtype="Node" CircId="Node-32" mainComp="false" Pos="-380,-236" />
 
@@ -102,8 +102,8 @@
 
 <item itemtype="Connector" uid="connector-396" startpinid="Ground-6-Gnd" endpinid="Resistor-15-lPin" pointList="-252,-168,-252,-184" />
 
-<item itemtype="Connector" uid="Connector-397" startpinid="SerialPort-40-pin1" endpinid="Uno-19-1" pointList="-188,-340,-188,-288,-180,-288" />
+<item itemtype="Connector" uid="Connector-397" startpinid="SerialPort-40-pin1" endpinid="Uno-19-1" pointList="-192,-344,-192,-288,-180,-288" />
 
-<item itemtype="Connector" uid="Connector-398" startpinid="SerialPort-40-pin0" endpinid="Uno-19-0" pointList="-188,-356,-156,-356,-156,-296,-180,-296" />
+<item itemtype="Connector" uid="Connector-398" startpinid="SerialPort-40-pin0" endpinid="Uno-19-0" pointList="-192,-360,-156,-360,-156,-296,-180,-296" />
 
 </circuit>
