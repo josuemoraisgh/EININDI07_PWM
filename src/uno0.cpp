@@ -21,6 +21,6 @@ void loop()
   {
     previousTimeMS = currentTimeMS;
     analogWrite(pinPWM, 127 * sin(2 * PI * count / PERIODO) + 127);
-    count = (count + 1) % PERIODO;     
+    count = (count + 1) % PERIODO;  
   }
 }

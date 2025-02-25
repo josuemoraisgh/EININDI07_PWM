@@ -25,6 +25,6 @@ void loop() {
   if ((currentTimeMS - previousTimeMS) >= TIME_RESOLUTION) {
     previousTimeMS = currentTimeMS;
     analogWrite(pinPWM, sineTable[count]);
-    count = (count + 1) % PERIODO;    
+    count = (count + 1) % PERIODO; 
   }
 }
