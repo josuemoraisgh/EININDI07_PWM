@@ -1,16 +1,16 @@
 <circuit version="" rev="1751" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="Capacitor" CircId="Capacitor-31" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-276" rotation="180" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="12,20" valLabRot="-180" Capacitance="7.95 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+<item itemtype="Capacitor" CircId="Capacitor-31" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-276" rotation="180" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="12,20" valLabRot="-180" Capacitance="320 nF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
 
-<item itemtype="Resistor" CircId="Resistor-29" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-404,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-19" valLabRot="0" Resistance="1 kΩ" />
+<item itemtype="Resistor" CircId="Resistor-29" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-404,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-19" valLabRot="0" Resistance="10 kΩ" />
 
 <item itemtype="Subcircuit" CircId="Uno-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-188,-312" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="91,-18" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="19_mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
+<mainCompProps MainCompId="19_mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0,0,0,0,0," SerialMon="-1" />
 </item>
 
-<item itemtype="Resistor" CircId="Resistor-18" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-356,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="1 kΩ" />
+<item itemtype="Resistor" CircId="Resistor-18" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-356,-236" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="10 kΩ" />
 
-<item itemtype="Capacitor" CircId="Capacitor-17" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-212" rotation="90" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="-4,-11" valLabRot="-90" Capacitance="7.95 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+<item itemtype="Capacitor" CircId="Capacitor-17" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-428,-212" rotation="90" hflip="1" vflip="1" label="Capacitor-42" idLabPos="-16,-24" labelrot="0" valLabPos="-4,-11" valLabRot="-90" Capacitance="320 nF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
 
 <item itemtype="opAmp" CircId="opAmp-16" mainComp="false" Show_id="false" Show_Val="false" Pos="-476,-228" rotation="0" hflip="-1" vflip="1" label="opAmp-43" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="10000" Out_Imped="1e-14 Ω" Power_Pins="false" Switch_Pins="false" Volt_Pos="5 V" Volt_Neg="-5 V" />
 
