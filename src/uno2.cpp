@@ -5,7 +5,7 @@
 #define MAX_RESOLUTION 256   // Tamanho máximo do vetor de seno
 
 // Parâmetros
-float frequency = 100.0;             // Frequência em Hz
+float frequency = 5.0;               // Frequência em Hz
 uint16_t resolution = 100;           // Número de pontos para um ciclo da senoide
 uint8_t amplitude = 255;             // Amplitude (valor máximo de 0 a 255)
 uint8_t sineTable[MAX_RESOLUTION];   // Tabela de seno com tamanho fixo
