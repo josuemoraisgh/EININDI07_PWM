@@ -7,9 +7,6 @@
 byte count = 0;
 uint8_t sineTable[PERIODO];
 
-#define TIME_DELAY_MS 1
-uint32_t previousTimeMS = 0;
-
 void setup() {
   Serial.begin(19200);
   pinMode(pinPWM, OUTPUT);
@@ -21,9 +18,11 @@ void setup() {
   }
 }
 
+#define TIME_RESOLUTION 1
+uint32_t previousTimeMS = 0;
 void loop() {
   uint32_t currentTimeMS = millis();
-  if ((currentTimeMS - previousTimeMS) >= TIME_DELAY_MS) {
+  if ((currentTimeMS - previousTimeMS) >= TIME_RESOLUTION) {
     previousTimeMS = currentTimeMS;
     analogWrite(pinPWM, sineTable[count]);
     count = (count + 1) % PERIODO;    
