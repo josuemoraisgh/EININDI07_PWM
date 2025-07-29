@@ -208,8 +208,8 @@
       "top": 87.42,
       "left": -398.4,
       "attrs": {
-        "resistance": "15000",
-        "capacitance": "0.0000022"
+        "resistance": "1000",
+        "capacitance": "0.00000151"
       }
     }
   ],
