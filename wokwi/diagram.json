@@ -175,7 +175,10 @@
       "id": "fpb1",
       "top": -94.98,
       "left": -196.8,
-      "attrs": {}
+      "attrs": {
+        "resistance": "1000",
+        "capacitance": "0.0000015"
+      }
     },
     {
       "type": "chip-buildwave",
@@ -185,7 +188,10 @@
       "attrs": {
         "freq1": "10",
         "freq2": "110",
-        "amplitude": "0.8"
+        "freq3": "0",
+        "freq4": "0",
+        "freq5": "0",
+        "amplitude": "1.0"
       }
     },
     {
